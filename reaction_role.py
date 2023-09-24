@@ -1,4 +1,7 @@
-  @discord.ui.button(label= '✅', custom_id = "Announcement", style = discord.ButtonStyle.gray)
+# Note that you have to copy and paste all this code into yours or if you are more advance feel free to do whatever you want. Enjoy~!
+# This code is not specifically for 1 server your bot can execute this code on any server 
+
+@discord.ui.button(label= '✅', custom_id = "Announcement", style = discord.ButtonStyle.gray)
   async def button1(self, interaction, button):
     _role = discord.utils.get(interaction.guild.roles, name= self.role_n)
     role = _role.id #put your role id here
@@ -12,7 +15,7 @@
 
 
 
-@Raiden.tree.command(name='reaction_role', description='Provide the role name')
+@Raiden.tree.command(name='reaction_role', description='Provide the role name') # Kindly Replace  @Raiden with @bot or the name of your client
 async def reaction_role(ctx: discord.Interaction, role_name: str, description_of_role: str):
   embed = discord.Embed(title = to_upper(role_name), description = description_of_role)
   r = discord.utils.get(ctx.guild.roles, name= role_name)
